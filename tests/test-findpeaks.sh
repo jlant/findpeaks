@@ -1,6 +1,6 @@
 #!/bin/bash
 
-test_3_args()
+test_3_args_1_peak_1_daily_value_file()
 {
     echo "testing 3 arguments - should print the following"
     echo ""
@@ -11,4 +11,4 @@ test_3_args()
 }
 
 # main
-test_3_args
+test_3_args_1_peak_1_daily_value_file
