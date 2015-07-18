@@ -10,9 +10,10 @@ elif [ $# -eq 2 ]; then
     TYPE=$1
     FILENAME=$2
 else
-    echo "Not enough args supplied!"
+    echo "Incorrect number of args supplied!"
     echo "Usage: findpeaks.sh [numpeaks] type files"
-    exit 1
+    echo "Example: findpeaks.sh -2 -d sample-daily-value-file.txt"
+    exit
 fi
 
 # find peaks by cutting the appropriate columns and reverse sorting on the parameter value column (not the datetime column)
