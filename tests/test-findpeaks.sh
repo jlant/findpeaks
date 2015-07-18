@@ -82,9 +82,28 @@ test_3_args_1_peak_1_unit_value_file()
     echo "---"
 }
 
+test_3_args_2_peaks_1_unit_value_file()
+{
+    echo "Testing 3 arguments 2 peaks 1 unit value file"
+    echo ""
+    echo "Expected:"
+    echo ""
+    echo "tests/test-uv.txt"
+    echo "2015-03-16 00:30        EDT     20"
+    echo "2015-03-16 00:45        EDT     15"
+    echo ""
+    echo "Actual:"
+    echo ""
+    bash findpeaks.sh -2 -u tests/test-uv.txt  
+    echo ""
+    echo "---"
+}
+
+
 # main
 test_3_args_1_peak_1_daily_value_file
 test_3_args_3_peaks_1_daily_value_file
 test_2_args_1_peak_1_daily_value_file
 test_1_args_echo_error
 test_3_args_1_peak_1_unit_value_file
+test_3_args_2_peaks_1_unit_value_file
