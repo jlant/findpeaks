@@ -135,6 +135,25 @@ test_1_args_echo_error_unit_value_file()
     echo "---"
 }
 
+test_multi_file_2_args_1_peak_1_unit_value_file()
+{
+    echo "Testing multiple files with 2 arguments 1 peak 1 unit value file - should use default of 1 for number of peaks"
+    echo 
+    echo "Expected:"
+    echo 
+    echo "tests/test-03293000-uv.txt"
+    echo "2015-07-21 00:00        EDT     1.28"
+    echo
+    echo "tests/test-uv.txt"
+    echo "2015-03-16 00:30        EDT     20"
+    echo 
+    echo "Actual:"
+    echo 
+    bash findpeaks.sh -u tests/*uv*.txt    
+    echo 
+    echo "---"
+}
+
 # main
 test_3_args_1_peak_1_daily_value_file
 test_3_args_3_peaks_1_daily_value_file
@@ -146,3 +165,4 @@ test_2_args_1_peak_1_unit_value_file
 
 test_1_args_echo_error_daily_value_file
 test_1_args_echo_error_unit_value_file
+test_multi_file_2_args_1_peak_1_unit_value_file

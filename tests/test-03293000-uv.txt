@@ -1,0 +1,74 @@
+# ---------------------------------- WARNING ----------------------------------------
+# The data you have obtained from this automated U.S. Geological Survey database
+# have not received Director's approval and as such are provisional and subject to
+# revision.  The data are released on the condition that neither the USGS nor the
+# United States Government may be held liable for any damages resulting from its use.
+# Additional info: http://help.waterdata.usgs.gov/policies/provisional-data-statement
+#
+# File-format description:  http://help.waterdata.usgs.gov/faq/about-tab-delimited-output
+# Automated-retrieval info: http://help.waterdata.usgs.gov/faq/automated-retrievals
+#
+# Contact:   gs-w_support_nwisweb@usgs.gov
+# retrieved: 2015-07-21 12:47:29 EDT       (sdww01)
+#
+# Data for the following 1 site(s) are contained in this file
+#    USGS 03293000 M FK BEARGRASS CR AT OLD CANNONS LN AT LOUISVILLE,
+# -----------------------------------------------------------------------------------
+#
+# Data provided for site 03293000
+#    DD parameter   Description
+#    02   00065     Gage height, feet
+#
+# Data-value qualification codes included in this output: 
+#     P  Provisional data subject to revision.  
+# 
+agency_cd	site_no	datetime	tz_cd	02_00065	02_00065_cd
+5s	15s	20d	6s	14n	10s
+USGS	03293000	2015-07-21 00:00	EDT	1.28	P
+USGS	03293000	2015-07-21 00:15	EDT	1.28	P
+USGS	03293000	2015-07-21 00:30	EDT	1.27	P
+USGS	03293000	2015-07-21 00:45	EDT	1.27	P
+USGS	03293000	2015-07-21 01:00	EDT	1.27	P
+USGS	03293000	2015-07-21 01:15	EDT	1.27	P
+USGS	03293000	2015-07-21 01:30	EDT	1.27	P
+USGS	03293000	2015-07-21 01:45	EDT	1.27	P
+USGS	03293000	2015-07-21 02:00	EDT	1.26	P
+USGS	03293000	2015-07-21 02:15	EDT	1.26	P
+USGS	03293000	2015-07-21 02:30	EDT	1.26	P
+USGS	03293000	2015-07-21 02:45	EDT	1.26	P
+USGS	03293000	2015-07-21 03:00	EDT	1.26	P
+USGS	03293000	2015-07-21 03:15	EDT	1.25	P
+USGS	03293000	2015-07-21 03:30	EDT	1.25	P
+USGS	03293000	2015-07-21 03:45	EDT	1.25	P
+USGS	03293000	2015-07-21 04:00	EDT	1.25	P
+USGS	03293000	2015-07-21 04:15	EDT	1.25	P
+USGS	03293000	2015-07-21 04:30	EDT	1.25	P
+USGS	03293000	2015-07-21 04:45	EDT	1.25	P
+USGS	03293000	2015-07-21 05:00	EDT	1.25	P
+USGS	03293000	2015-07-21 05:15	EDT	1.25	P
+USGS	03293000	2015-07-21 05:30	EDT	1.24	P
+USGS	03293000	2015-07-21 05:45	EDT	1.24	P
+USGS	03293000	2015-07-21 06:00	EDT	1.24	P
+USGS	03293000	2015-07-21 06:15	EDT	1.24	P
+USGS	03293000	2015-07-21 06:30	EDT	1.24	P
+USGS	03293000	2015-07-21 06:45	EDT	1.24	P
+USGS	03293000	2015-07-21 07:00	EDT	1.24	P
+USGS	03293000	2015-07-21 07:15	EDT	1.24	P
+USGS	03293000	2015-07-21 07:30	EDT	1.24	P
+USGS	03293000	2015-07-21 07:45	EDT	1.23	P
+USGS	03293000	2015-07-21 08:00	EDT	1.23	P
+USGS	03293000	2015-07-21 08:15	EDT	1.23	P
+USGS	03293000	2015-07-21 08:30	EDT	1.23	P
+USGS	03293000	2015-07-21 08:45	EDT	1.23	P
+USGS	03293000	2015-07-21 09:00	EDT	1.23	P
+USGS	03293000	2015-07-21 09:15	EDT	1.23	P
+USGS	03293000	2015-07-21 09:30	EDT	1.23	P
+USGS	03293000	2015-07-21 09:45	EDT	1.23	P
+USGS	03293000	2015-07-21 10:00	EDT	1.23	P
+USGS	03293000	2015-07-21 10:15	EDT	1.23	P
+USGS	03293000	2015-07-21 10:30	EDT	1.22	P
+USGS	03293000	2015-07-21 10:45	EDT	1.22	P
+USGS	03293000	2015-07-21 11:00	EDT	1.22	P
+USGS	03293000	2015-07-21 11:15	EDT	1.22	P
+USGS	03293000	2015-07-21 11:30	EDT	1.22	P
+USGS	03293000	2015-07-21 11:45	EDT	1.22	P

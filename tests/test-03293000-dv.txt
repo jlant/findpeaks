@@ -1,0 +1,33 @@
+# ---------------------------------- WARNING ----------------------------------------
+# The data you have obtained from this automated U.S. Geological Survey database
+# have not received Director's approval and as such are provisional and subject to
+# revision.  The data are released on the condition that neither the USGS nor the
+# United States Government may be held liable for any damages resulting from its use.
+# Additional info: http://help.waterdata.usgs.gov/policies/provisional-data-statement
+#
+# File-format description:  http://help.waterdata.usgs.gov/faq/about-tab-delimited-output
+# Automated-retrieval info: http://help.waterdata.usgs.gov/faq/automated-retrievals
+#
+# Contact:   gs-w_support_nwisweb@usgs.gov
+# retrieved: 2015-07-21 12:44:39 EDT       (vaww01)
+#
+# Data for the following 1 site(s) are contained in this file
+#    USGS 03293000 M FK BEARGRASS CR AT OLD CANNONS LN AT LOUISVILLE,
+# -----------------------------------------------------------------------------------
+#
+# Data provided for site 03293000
+#    DD parameter statistic   Description
+#    01   00060     00003     Discharge, cubic feet per second (Mean)
+#
+# Data-value qualification codes included in this output: 
+#     P  Provisional data subject to revision.  
+# 
+agency_cd	site_no	datetime	01_00060_00003	01_00060_00003_cd
+5s	15s	20d	14n	10s
+USGS	03293000	2015-07-14	832	P
+USGS	03293000	2015-07-15	122	P
+USGS	03293000	2015-07-16	66	P
+USGS	03293000	2015-07-17	44	P
+USGS	03293000	2015-07-18	279	P
+USGS	03293000	2015-07-19	58	P
+USGS	03293000	2015-07-20	39	P

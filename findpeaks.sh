@@ -21,32 +21,56 @@
 # Example:
 #   findpeaks.sh -2 -d sample-daily-value-file.txt 
 
-# function to display usage of program
-usage(){
-    echo "Usage: findpeaks.sh [numpeaks] FILETYPE FILES"
+usage() {
+    echo
+    echo "Usage: findpeaks.sh [numpeaks] filetype files"
     echo "Example: findpeaks.sh -2 -d sample-daily-value-file.txt"    
 }
 
-# check number of arguments; print error and usage if the incorrect number of arguments are entered, otherwise assign appropriately
-if [ $# -eq 3 ]; then
-    NUMPEAKS=$1
-    FILETYPE=$2
-    FILENAME=$3
-elif [ $# -eq 2 ]; then
-    NUMPEAKS="-1"
-    FILETYPE=$1
-    FILENAME=$2
-else
-    echo "Incorrect number of args supplied!"
-    echo 
+finddailypeaks() {
+    echo "Processing daily timeseries"
+    echo
+    for file in $2; do
+        echo $file
+        grep "^USGS" $file | cut -f 3-4 | sort -rn -k2 | head $1
+        echo
+    done
+}
+
+findunitpeaks() {
+    echo "Processing unit timeseries"
+    echo
+    for file in $2; do
+        echo $file
+        grep "^USGS" $file | cut -f 3-5 | sort -rn -k4 | head $1
+        echo
+    done
+}
+
+# --- main ---
+
+# default number of peaks is 1
+numpeaks=-1
+
+# display usage if no arguments are given
+if [ $# -eq 0 ]; then
     usage
-    exit
 fi
 
-# find peaks by cutting the appropriate columns and reverse sorting on the parameter value column (not the datetime column)
-echo $FILENAME
-if [ "$FILETYPE" = "-d" ]; then
-    grep "^USGS" $FILENAME | cut -f 3-4 | sort -rn -k2 | head $NUMPEAKS
-elif [ "$FILETYPE" = "-u" ]; then
-    grep "^USGS" $FILENAME | cut -f 3-5 | sort -rn -k4 | head $NUMPEAKS
-fi
+# loop through arguments and find peaks based on argument flags
+while [ $# -gt 0 ]; do
+    case "$1" in
+        *[[:digit:]]* )         numpeaks=$1 
+                                ;;
+        -d | --daily )          files=${@:2}
+                                finddailypeaks "$numpeaks" "$files"
+                                ;; 
+        -u | --unit )           files=${@:2}
+                                findunitpeaks "$numpeaks" "$files"
+                                ;; 
+        -h | --help )           usage
+                                exit
+                                ;;
+    esac
+    shift
+done
