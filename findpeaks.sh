@@ -13,10 +13,12 @@
 # Options:
 #   numpeaks    number of peaks to find 
 #
+# Help:
+#    findpeaks.sh [-h | --help]
+#
 # Description:
 #   The findpeaks.sh script finds the largest (peak) value in USGS NWIS (http://waterdata.usgs.gov/nwis) timeseries data files.
-#   The data files from the USGS NWIS are either daily timeseries (1 observation per day) or unit timeseries (96 observations
-#   per day 15 minute data) 
+#   The data files from the USGS NWIS are either daily timeseries (1 observation per day) or unit timeseries (1 observation every 15 minutes) 
 #
 # Example:
 #   findpeaks.sh -2 -d sample-daily-value-file.txt 
