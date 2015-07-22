@@ -1,6 +1,6 @@
 # findpeaks
 
-findpeak finds the largest (peak) value of the first parameter in [USGS NWIS](http://waterdata.usgs.gov/nwis) timeseries
+findpeak finds the largest (peak) values of the first parameter in [USGS NWIS] timeseries
 data files and prints the date and time of its occurrence along with the corresponding value.  
 
 ## Version
@@ -8,13 +8,15 @@ data files and prints the date and time of its occurrence along with the corresp
 
 ## Features
 
-* finds the peak value of any [USGS NWIS](http://waterdata.usgs.gov/nwis) timeseries data file; USGS NWIS data files are either daily timeseries (1 observation per day) or unit timeseries (1 observation every 15 minutes)
-* can be run on any number of [USGS NWIS](http://waterdata.usgs.gov/nwis) timeseries data files
-* option to find any number of peaks; top 3, top 10, etc.
+* finds the peak values of the first parameter in [USGS NWIS] timeseries data files
+    * USGS NWIS data files are either daily timeseries (1 observation per day) or unit timeseries (1 observation every 15 minutes)
+    * any parameter is valid - discharge, stage, temperature, etc.
+* can be used on multiple [USGS NWIS] timeseries data files
+* can find more than 1 peak - top 3 peaks, top 10 peaks, etc.
 
 ## Example
 
-A single daily value file.
+Find peak in a daily value file.
 ```
 $ bash findpeak.sh --daily data/03290500-dv.txt
 Processing daily timeseries
@@ -23,7 +25,7 @@ data/03290500-dv.txt
 2014-02-06      64700
 ```
 
-Top 2 peaks in unit value file.
+Find the top 2 peaks in a unit value file.
 ```
 $ bash findpeaks.sh -2 -u data/*uv.txt
 Processing unit timeseries
@@ -33,7 +35,7 @@ data/03253000-uv.txt
 2015-04-03 15:15        EDT     20.19
 ```
 
-Multiple daily value files.
+Find the peak for multiple daily value files.
 ```
 $ bash findpeak.sh -d data/*dv.txt
 Processing daily timeseries
@@ -46,10 +48,11 @@ data/0329800-dv.txt
 
 ```
 
-
 ## Installation
 
-Download or clone the repository.
+Download the repository.
+
+or
 
 Clone the repository:
 ```
@@ -60,7 +63,7 @@ $ git clone https://github.com/jlant/findpeaks.git
 
 ```
 Name:
-  findpeaks.sh - finds the largest (peak) value in USGS NWIS (http://waterdata.usgs.gov/nwis) data files
+  findpeaks.sh - finds the largest (peak) value in USGS NWIS timeseries data files
 
 Usage:
   findpeaks.sh [numpeaks] FILETYPE FILES
@@ -84,20 +87,65 @@ Example:
 ```
 
 ## Tests
+Running the tests, using the commands below, will print a fair bit of output
+to the screen where the "Expected" values and be "Actual" values can be compared.
 
+Run tests from the projects root directory `findpeaks/`:
 ```sh
 $ bash runtests.sh
+Testing 3 arguments 1 peak 1 daily value file
+
+Expected:
+
+tests/test-dv.txt
+2014-09-04      50
+
+Actual:
+
+Processing daily timeseries
+
+tests/test-dv.txt
+2014-09-04      50
+
+...
+
+Testing multiple files with 2 arguments 1 peak 1 unit value file - should use default of 1 for number of peaks
+
+Expected:
+
+tests/test-03293000-uv.txt
+2015-07-21 00:00        EDT     1.28
+
+tests/test-uv.txt
+2015-03-16 00:30        EDT     20
+
+Actual:
+
+Processing unit timeseries
+
+tests/test-03293000-uv.txt
+2015-07-21 00:15        EDT     1.28
+
+tests/test-uv.txt
+2015-03-16 00:30        EDT     20
+```
+
+Run tests from within the `tests/` directory:
+```sh
+$ bash test-findpeaks.sh
 ```
 
 ## Requirements
 
-Unix (like) environment.
+A Unix (like) environment.
 
 Windows - [GitBash](https://msysgit.github.io/) or [Cygwin](https://www.cygwin.com/)
 
 ## License
 
-MIT License (see LICENSE file)
+MIT License
+
+Please see `LICENSE` file
 
 ## Contributing
 
@@ -109,7 +157,11 @@ Explain how to help and contribute to the project.
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request
 
-## Author(s)
+## Author
 
 Jeremiah Lant  
-jeremiahlant@gmail.com
+jeremiahlant@gmail.com  
+@jeremiahlant
+
+
+[USGS NWIS]:http://waterdata.usgs.gov/nwis
