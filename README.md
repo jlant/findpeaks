@@ -16,7 +16,7 @@ data files and prints the date and time of its occurrence along with the corresp
 
 ## Example
 
-Find peak in a daily value file.
+Find peak in a daily value timeseries file.
 ```
 $ bash findpeak.sh --daily data/03290500-dv.txt
 Processing daily timeseries
@@ -25,7 +25,7 @@ data/03290500-dv.txt
 2014-02-06      64700
 ```
 
-Find the top 2 peaks in a unit value file.
+Find the top 2 peaks in a unit value timeseries file.
 ```
 $ bash findpeaks.sh -2 -u data/*uv.txt
 Processing unit timeseries
@@ -35,7 +35,7 @@ data/03253000-uv.txt
 2015-04-03 15:15        EDT     20.19
 ```
 
-Find the peak for multiple daily value files.
+Find the peak for multiple daily value timeseries files.
 ```
 $ bash findpeak.sh -d data/*dv.txt
 Processing daily timeseries
@@ -66,11 +66,11 @@ Name:
   findpeaks.sh - finds the largest (peak) value in USGS NWIS timeseries data files
 
 Usage:
-  findpeaks.sh [numpeaks] FILETYPE FILES
+  findpeaks.sh [numpeaks] filetype files
 
 Parameters:
-  FILETYPE    [[-d | --daily ] | [-u | --unit]]  
-  FILES       list of data file(s) to process
+  filetype    [[-d | --daily ] | [-u | --unit]]  
+  files       list of data file(s) to process
 
 Options:
   numpeaks    number of peaks to find
