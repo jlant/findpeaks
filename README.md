@@ -1,6 +1,6 @@
 # findpeaks
 
-findpeak finds the largest (peak) values of the first parameter in [USGS NWIS] timeseries
+Finds the peak (largest) values of the first parameter in [USGS NWIS] timeseries
 data files and prints the date and time of its occurrence along with the corresponding value.  
 
 ## Version
