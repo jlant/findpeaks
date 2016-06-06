@@ -4,7 +4,7 @@ Finds the peak (largest) values of the first parameter in [USGS NWIS] timeseries
 data files and prints the date and time of its occurrence along with the corresponding value.  
 
 ## Version
-0.0.1
+0.1.0
 
 ## Features
 
@@ -18,7 +18,7 @@ data files and prints the date and time of its occurrence along with the corresp
 
 Find peak in a daily value timeseries file.
 ```
-$ bash findpeak.sh --daily data/03290500-dv.txt
+$ bash findpeaks.sh --daily data/03290500-dv.txt
 Processing daily timeseries
 
 data/03290500-dv.txt
@@ -37,7 +37,7 @@ data/03253000-uv.txt
 
 Find the peak for multiple daily value timeseries files.
 ```
-$ bash findpeak.sh -d data/*dv.txt
+$ bash findpeaks.sh -d data/*dv.txt
 Processing daily timeseries
 
 data/03290500-dv.txt
@@ -137,13 +137,15 @@ $ bash test-findpeaks.sh
 
 ## Requirements
 
-A Unix (like) environment.
+A Unix shell such as [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)).
 
-Windows - [GitBash](https://msysgit.github.io/) or [Cygwin](https://www.cygwin.com/)
+Mac OS X - the default shell, already pre-installed, is Bash.
+Linux - the default shell, already pre-installed, is Bash.
+Windows - recommend using [GitBash](https://msysgit.github.io/) or [Cygwin](https://www.cygwin.com/)
 
 ## License
 
-MIT License
+[MIT License](http://choosealicense.com/licenses/mit/)
 
 Please see `LICENSE` file
 
