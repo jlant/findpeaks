@@ -1,47 +1,47 @@
 # findpeaks
 
-Finds the largest (peak) value in U.S. Geological Survey (USGS) water timeseries data files and prints the date and time
+Finds the largest (peak) value in U.S. Geological Survey (USGS) water time series data files and prints the date and time
 of its occurrence along with the corresponding value.  The data files are from the USGS National Water Information
-System (NWIS) (http://waterdata.usgs.gov/nwis), and are either daily timeseries (1 observation per day) or unit
-timeseries (1 observation every 15 minutes).
+System (NWIS) (http://waterdata.usgs.gov/nwis), and are either daily time series (1 observation per day) or unit
+time series (1 observation every 15 minutes).
 
 
 ## Version
-0.1.0
+1.0.0
 
 ## Features
 
-* finds the peak values of the first parameter in [USGS NWIS] timeseries data files
-    * USGS NWIS data files are either daily timeseries (1 observation per day) or unit timeseries (1 observation every 15 minutes)
+* finds the peak values of the first parameter in [USGS NWIS] time series data files
+    * USGS NWIS data files are either daily time series (1 observation per day) or unit time series (1 observation every 15 minutes)
     * any parameter is valid - discharge, stage, temperature, etc.
-* can be used on multiple [USGS NWIS] timeseries data files
+* can be used on multiple [USGS NWIS] time series data files
 * can find more than 1 peak - top 3 peaks, top 10 peaks, etc.
 
 ## Example
 
-Find peak in a daily value timeseries file.
+Find peak in a daily value time series file.
 ```
 $ bash findpeaks.sh --daily data/03290500-dv.txt
-Processing daily timeseries
+Processing daily time series
 
 data/03290500-dv.txt
 2014-02-06      64700
 ```
 
-Find the top 2 peaks in a unit value timeseries file.
+Find the top 2 peaks in a unit value time series file.
 ```
 $ bash findpeaks.sh -2 -u data/*uv.txt
-Processing unit timeseries
+Processing unit time series
 
 data/03253000-uv.txt
 2015-04-03 15:00        EDT     20.21
 2015-04-03 15:15        EDT     20.19
 ```
 
-Find the peak for multiple daily value timeseries files.
+Find the peak for multiple daily value time series files.
 ```
 $ bash findpeaks.sh -d data/*dv.txt
-Processing daily timeseries
+Processing daily time series
 
 data/03290500-dv.txt
 2014-02-06      64700
@@ -66,7 +66,7 @@ $ git clone https://github.com/jlant/findpeaks.git
 
 ```
 Name:
-  findpeaks.sh - finds the largest (peak) value in U.S. Geological Survey (USGS) water timeseries data files.
+  findpeaks.sh - finds the largest (peak) value in U.S. Geological Survey (USGS) water time series data files.
 
 Usage:
   findpeaks.sh [numpeaks] filetype files
@@ -82,10 +82,10 @@ Help:
     findpeaks.sh [-h | --help]
 
 Description:
-  Finds the largest (peak) value in U.S. Geological Survey (USGS) water timeseries data files and prints the date and time
+  Finds the largest (peak) value in U.S. Geological Survey (USGS) water time series data files and prints the date and time
   of its occurrence along with the corresponding value.  The data files are from the USGS National Water Information
-  System (NWIS) (http://waterdata.usgs.gov/nwis), and are either daily timeseries (1 observation per day) or unit
-  timeseries (1 observation every 15 minutes).
+  System (NWIS) (http://waterdata.usgs.gov/nwis), and are either daily time series (1 observation per day) or unit
+  time series (1 observation every 15 minutes).
 
 Example:
   findpeaks.sh -2 -d sample-daily-value-file.txt
@@ -107,7 +107,7 @@ tests/test-dv.txt
 
 Actual:
 
-Processing daily timeseries
+Processing daily time series
 
 tests/test-dv.txt
 2014-09-04      50
@@ -126,7 +126,7 @@ tests/test-uv.txt
 
 Actual:
 
-Processing unit timeseries
+Processing unit time series
 
 tests/test-03293000-uv.txt
 2015-07-21 00:15        EDT     1.28
