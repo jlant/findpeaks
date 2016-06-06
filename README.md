@@ -1,7 +1,10 @@
 # findpeaks
 
-Finds the peak (largest) values of the first parameter in [USGS NWIS] timeseries
-data files and prints the date and time of its occurrence along with the corresponding value.  
+Finds the largest (peak) value in U.S. Geological Survey (USGS) water timeseries data files and prints the date and time
+of its occurrence along with the corresponding value.  The data files are from the USGS National Water Information
+System (NWIS) (http://waterdata.usgs.gov/nwis), and are either daily timeseries (1 observation per day) or unit
+timeseries (1 observation every 15 minutes).
+
 
 ## Version
 0.1.0
@@ -63,7 +66,7 @@ $ git clone https://github.com/jlant/findpeaks.git
 
 ```
 Name:
-  findpeaks.sh - finds the largest (peak) value in USGS NWIS timeseries data files
+  findpeaks.sh - finds the largest (peak) value in U.S. Geological Survey (USGS) water timeseries data files.
 
 Usage:
   findpeaks.sh [numpeaks] filetype files
@@ -79,8 +82,10 @@ Help:
     findpeaks.sh [-h | --help]
 
 Description:
-  The findpeaks.sh script finds the largest (peak) value in USGS NWIS (http://waterdata.usgs.gov/nwis) timeseries data files.
-  The data files from the USGS NWIS are either daily timeseries (1 observation per day) or unit timeseries (1 observation every 15 minutes)
+  Finds the largest (peak) value in U.S. Geological Survey (USGS) water timeseries data files and prints the date and time
+  of its occurrence along with the corresponding value.  The data files are from the USGS National Water Information
+  System (NWIS) (http://waterdata.usgs.gov/nwis), and are either daily timeseries (1 observation per day) or unit
+  timeseries (1 observation every 15 minutes).
 
 Example:
   findpeaks.sh -2 -d sample-daily-value-file.txt

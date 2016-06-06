@@ -1,32 +1,34 @@
 #!/bin/bash
 
 # Name:
-#   findpeaks.sh - finds the largest (peak) value in USGS NWIS (http://waterdata.usgs.gov/nwis) data files
+#   findpeaks.sh - finds the largest (peak) value in U.S. Geological Survey (USGS) water timeseries data files.
 #
 # Usage:
 #   findpeaks.sh [numpeaks] FILETYPE FILES
 #
 # Parameters:
-#   FILETYPE    [[-d | --daily ] | [-u | --unit]]  
+#   FILETYPE    [[-d | --daily ] | [-u | --unit]]
 #   FILES       list of data file(s) to process
 #
 # Options:
-#   numpeaks    number of peaks to find 
+#   numpeaks    number of peaks to find
 #
 # Help:
 #    findpeaks.sh [-h | --help]
 #
 # Description:
-#   The findpeaks.sh script finds the largest (peak) value in USGS NWIS (http://waterdata.usgs.gov/nwis) timeseries data files.
-#   The data files from the USGS NWIS are either daily timeseries (1 observation per day) or unit timeseries (1 observation every 15 minutes) 
+#   Finds the largest (peak) value in U.S. Geological Survey (USGS) water timeseries data files and prints the date and time
+#   of its occurrence along with the corresponding value.  The data files are from the USGS National Water Information
+#   System (NWIS) (http://waterdata.usgs.gov/nwis), and are either daily timeseries (1 observation per day) or unit
+#   timeseries (1 observation every 15 minutes).
 #
 # Example:
-#   findpeaks.sh -2 -d sample-daily-value-file.txt 
+#   findpeaks.sh -2 -d sample-daily-value-file.txt
 
 usage() {
     echo
     echo "Usage: findpeaks.sh [numpeaks] filetype files"
-    echo "Example: findpeaks.sh -2 -d sample-daily-value-file.txt"    
+    echo "Example: findpeaks.sh -2 -d sample-daily-value-file.txt"
 }
 
 finddailypeaks() {
@@ -62,14 +64,14 @@ fi
 # loop through arguments and find peaks based on argument flags
 while [ $# -gt 0 ]; do
     case "$1" in
-        *[[:digit:]]* )         numpeaks=$1 
+        *[[:digit:]]* )         numpeaks=$1
                                 ;;
         -d | --daily )          files=${@:2}
                                 finddailypeaks "$numpeaks" "$files"
-                                ;; 
+                                ;;
         -u | --unit )           files=${@:2}
                                 findunitpeaks "$numpeaks" "$files"
-                                ;; 
+                                ;;
         -h | --help )           usage
                                 exit
                                 ;;
